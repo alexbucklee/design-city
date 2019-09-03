@@ -468,6 +468,18 @@ input[type="radio"].visually-hidden {
   .welcome {
     height: calc(100vh - 128px);
     text-align: center;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      width: 100%;
+      height: 30vw;
+      top: calc(64px + 60vw);
+      left: 0vw;
+      box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, 0.25);
+      border-radius: 5vw 5vw 0 0;
+    }
   }
 
   .welcome__image {
@@ -487,7 +499,6 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
     padding-top: 10.625vw;
     border-radius: 5vw 5vw 0 0;
-    box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, 0.25);
     background-color: #ffffff;
   }
 
@@ -511,7 +522,7 @@ input[type="radio"].visually-hidden {
     left: 20.625vw;
     width: 33.125vw;
     height: 2.5vw;
-    background-image: linear-gradient(to top, #55f2a7, #94ff40);
+    background-image: linear-gradient(90deg, #55F2A7 0%, #94FF40 100%);
   }
 
   .welcome__button {
