@@ -738,20 +738,20 @@ input[type="radio"].visually-hidden {
 }
 .page-footer {
   padding-top: 24px;
+  padding-bottom: 16px;
   background-color: #1a1a1a;
 }
 
 .page-footer__text {
   margin: 0;
-  margin-bottom: 16px;
   font-size: 12px;
-  font-weight: 300px;
+  font-weight: 300;
   color: #bdbdbd;
   text-align: center;
 }
 
 .page-footer .social-list {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .page-footer .social-list__item-link {
