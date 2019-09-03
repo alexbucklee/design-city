@@ -100,8 +100,8 @@ input[type="radio"].visually-hidden {
 .index-h2 {
   padding: 0;
   margin: 0;
-  margin-top: 10vw;
   font-size: 24px;
+  line-height: 32px;
 }
 
 // button
@@ -311,7 +311,7 @@ input[type="radio"].visually-hidden {
   .main-nav__hamb-button-wrapper {
     display: block;
     position: relative;
-    width: 20px;
+    width: 24px;
     height: 16px;
     padding: 16px;
     margin: -16px;
@@ -321,7 +321,7 @@ input[type="radio"].visually-hidden {
 
   .main-nav__hamb-button-line {
     position: absolute;
-    width: 20px;
+    width: 24px;
     height: 2px;
     background-color: #333333;
     transition: 0.6s all ease;
@@ -466,7 +466,7 @@ input[type="radio"].visually-hidden {
 
 @media (max-width: $mobile-width-only) {
   .welcome {
-    height: calc(100vh - 128px);
+    height: calc(177.5vw - 128px);
     text-align: center;
 
     &::before {
@@ -553,6 +553,104 @@ input[type="radio"].visually-hidden {
       border-bottom: 2px solid #333333;
       border-right: 2px solid #333333;
       transform: rotate(45deg);
+    }
+  }
+}
+
+// portfolio
+
+@media (max-width: $mobile-width-only) {
+  .portfolio {
+    // временно
+    min-height: 127.5vw;
+
+    margin-top: 10vw;
+    margin-bottom: 15vw;
+  }
+
+  .portfolio__text {
+    display: none;
+  }
+
+}
+
+// features
+
+@media (max-width: $mobile-width-only) {
+  .advantages {
+    height: 147.5vw;
+    margin-bottom: 25vw;
+  }
+
+  .advantages__list {
+    padding: 0;
+    margin: 0;
+    padding-top: 10vw;
+    padding-bottom: 12.5vw;
+    list-style: none;
+    display: flex;
+    box-sizing: border-box;
+    height: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .advantages__item {
+    position: relative;
+    margin-left: 52.5vw;
+    font-size: 5.625vw;
+    line-height: 7.5vw;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 42.5vw;
+      height: 2.5vw;
+      background: linear-gradient(90deg, #17BF6F 0%, #64CC12 100%);
+      top: 17.5vw;
+      left: 0vw;
+    }
+  }
+
+  .advantages__item--measure {
+    position: relative;
+    &::before {
+      content: "";
+
+      position: absolute;
+      width: 37.5vw;
+      height: 37.5vw;
+      top: -10vw;
+      left: -47.5vw;
+      background-image: url("../img/tape.svg");
+    }
+  }
+
+  .advantages__item--delivery {
+    position: relative;
+    &::before {
+      content: "";
+
+      position: absolute;
+      width: 37.5vw;
+      height: 37.5vw;
+      top: -10vw;
+      left: -47.5vw;
+      background-image: url("../img/truck.svg");
+    }
+  }
+
+  .advantages__item--install {
+    position: relative;
+    &::before {
+      content: "";
+
+      position: absolute;
+      width: 37.5vw;
+      height: 37.5vw;
+      top: -10vw;
+      left: -47.5vw;
+      background-image: url("../img/kitchen.svg");
     }
   }
 }
