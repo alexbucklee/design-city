@@ -14,7 +14,7 @@
       <div class="page-header__wrapper">
         <div class="page-header__wrapper-wrapper">
           <a class="page-header__logo">
-            <img class="page-header__logo-image" src="img/logo-header.svg" width="130px" height="30px;" alt="">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="130px" height="20px;" alt="Логотип «Дизайн-Сити»">
           </a>
           <div class="page-header__info">
             <div class="page-header__address">
@@ -57,7 +57,7 @@
     </header>
 
     <main class="page-main">
-      <h1 class="visually-hidden">Мебель на заказ в Йошкар-Оле</h1>
+      <h1 class="visually-hidden">Мебель на заказ в Йошкар-Оле — Дизайн-Сити</h1>
 
       <section class="welcome">
         <div class="welcome__image">
@@ -71,43 +71,54 @@
         </div>
       </section>
 
-      <section class="portfolio container">
-        <h2 id="portfolio" class="portfolio__title index-h2">Примеры наших работ</h2>
-        <p class="portfolio__text">Выберите интересующую Вас категорию</p>
-        <nav class="tab-nav">
+      <section class="portfolio">
+        <div class="container">
+          <h2 id="portfolio" class="portfolio__title index-h2">Наши работы</h2>
+          <p class="portfolio__text">Выберите интересующую Вас категорию</p>
+        </div>
+        <nav class="portfolio__tab-nav tab-nav">
           <ul class="tab-nav__list">
             <li class="tab-nav__item">
-              <button class="tab-nav__tab tab-nav__tab--current" type="button">Кухни</button>
+              <a class="tab-nav__tab tab-nav__tab--current">Кухни</a>
             </li>
             <li class="tab-nav__item">
-              <button class="tab-nav__tab tab-nav__tab--current" type="button">Шкафы-купе</button>
+              <a class="tab-nav__tab">Шкафы-купе</a>
             </li>
             <li class="tab-nav__item">
-              <button class="tab-nav__tab tab-nav__tab--current" type="button">Гостиные</button>
+              <a class="tab-nav__tab">Гостиные</a>
             </li>
             <li class="tab-nav__item">
-              <button class="tab-nav__tab tab-nav__tab--current" type="button">Офисная мебель</button>
+              <a class="tab-nav__tab">Офисная мебель</a>
             </li>
             <li class="tab-nav__item">
-              <button class="tab-nav__tab tab-nav__tab--current" type="button">Гардеробные</button>
+              <a class="tab-nav__tab">Гардеробные</a>
             </li>
             <li class="tab-nav__item">
-              <button class="tab-nav__tab tab-nav__tab--current" type="button">Прихожие</button>
+              <a class="tab-nav__tab">Прихожие</a>
             </li>
           </ul>
           <ul class="portfolio__gallery gallery">
-            <li class="gallery__item">
-              <a href="#"><img src="" alt=""></a>
-            </li>
-            <li class="gallery__item">
-              <a href="#"><img src="" alt=""></a>
-            </li>
-            <li class="gallery__item">
-              <a href="#"><img src="" alt=""></a>
-            </li>
-            <li class="gallery__item">
-              <a href="#"><img src="" alt=""></a>
-            </li>
+            <li class="gallery__item"><a class="gallery__card" href="#">
+              <img src="img/photos/kitchen-1-small-1x.jpg" alt="">
+              <h3>Кухня в скандинавском стиле</h3>
+              <p class="gallery__button-wrapper">
+                <button class="gallery__button" href="#">Подробнее</button>
+              </p>
+            </a>
+            <li class="gallery__item"><a class="gallery__card" href="#">
+              <img src="img/photos/kitchen-2-small-1x.jpg" alt="">
+              <h3>Кухня в скандинавском стиле</h3>
+              <p class="gallery__button-wrapper">
+                <button class="gallery__button" href="#">Подробнее</button>
+              </p>
+            </a>
+            <li class="gallery__item"><a class="gallery__card" href="#">
+              <img src="img/photos/kitchen-3-small-1x.jpg" alt="">
+              <h3>Кухня в скандинавском стиле</h3>
+              <p class="gallery__button-wrapper">
+                <button class="gallery__button" href="#">Подробнее</button>
+              </p>
+            </a>
           </ul>
           <p class="portfolio__toggles slider__toggles">
             <button class="slider__toggle" type="button" name="button">1</button>
