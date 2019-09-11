@@ -675,6 +675,7 @@ input[type="radio"].visually-hidden {
   .tab-nav {
     overflow: hidden;
     position: relative;
+    padding-bottom: 16px;
 
     &::after {
       content: "";
@@ -683,9 +684,10 @@ input[type="radio"].visually-hidden {
       // background-color: red;
       bottom: 16px;
       left: 0;
+      right: 0;
       z-index: -10;
       height: 100%;
-      width: 100%;
+      // width: 100%;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.06);
     }
   }
@@ -695,8 +697,8 @@ input[type="radio"].visually-hidden {
     list-style: none;
     margin: 0;
     padding: 0;
-    padding-bottom: 32px;
-    margin-bottom: -33px;
+    padding-bottom: 48px;
+    margin-bottom: -48px;
     white-space: nowrap;
     overflow-x: scroll;
   }
@@ -773,16 +775,21 @@ input[type="radio"].visually-hidden {
     background: #FFFFFF;
     box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.06);
     white-space: normal;
+    transition: transform 0.3s ease;
 
     & h3 {
-      margin: 8px 16px 16px;
+      margin: 8px 16px 24px;
       font-size: 14px;
       line-height: 24px;
-      font-weight: 600;
+      font-weight: 400;
     }
 
     & a {
       margin: 0;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
     }
   }
 
@@ -790,14 +797,16 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding-right: 16px;
     padding-bottom: 16px;
+    font-size: 14px;
+    line-height: 16px;
     text-align: right;
   }
 
   .gallery__button {
-    padding: 0 4px;
+    margin: 0;
+    padding: 0;
     border: none;
     background: none;
-    font-size: 14px;
     color: #3EC640;
   }
 }
@@ -837,6 +846,7 @@ input[type="radio"].visually-hidden {
   .tab-nav__list {
     display: flex;
     justify-content: space-between;
+    overflow-x: visible;
   }
 
   .tab-nav__item {
@@ -876,6 +886,10 @@ input[type="radio"].visually-hidden {
   .tab-nav {
     margin: 0 auto;
     max-width: 1168px;
+
+    &::after {
+      margin: 0 24px;
+    }
   }
 
   .tab-nav__tab {
@@ -883,8 +897,18 @@ input[type="radio"].visually-hidden {
     font-size: 16px;
   }
 
+  .tab-nav__item {
+    background-color: #ffffff;
+  }
+
+  .portfolio__gallery-wrapper {
+    overflow: hidden;
+  }
+
   .portfolio__gallery {
     margin: 0 auto;
+    margin-bottom: -48px;
+    padding-bottom: 48px;
     max-width: 1168px;
   }
 
@@ -894,6 +918,10 @@ input[type="radio"].visually-hidden {
 
   .gallery__card {
     width: 268px;
+
+    & h3 {
+      // font-size: 16px;
+    }
   }
 }
 
@@ -1057,6 +1085,40 @@ input[type="radio"].visually-hidden {
   }
 }
 
+@media (min-width: $desktop-width) {
+  .process__title {
+    margin-top: 32px;
+  }
+
+  .process__list {
+    // justify-content: space-between;
+    margin-bottom: 64px;
+  }
+
+  .process__item h3 {
+    margin-top: 56px;
+    font-size: 24px;
+  }
+
+  .process__item {
+    padding-right: 16px;
+    width: 352px;
+    box-sizing: border-box;
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      width: 352px;
+    }
+
+    &:nth-child(1),  &:nth-child(2), &:nth-child(4){
+      margin-right: 32px;
+    }
+  }
+}
+
 // request
 
 .request {
@@ -1164,7 +1226,7 @@ input[type="radio"].visually-hidden {
 
   .request__button {
     margin: 0;
-    padding: 22px 56px;
+    padding: 22px 54px;
     display: inline-block;
     border-radius: 28px;
   }
@@ -1190,6 +1252,27 @@ input[type="radio"].visually-hidden {
     margin: 0;
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .request {
+    padding-top: 40px;
+    padding-bottom: 56px;
+    margin-bottom: 48px;
+  }
+
+  .request__title {
+    margin-bottom: 32px;
+  }
+
+  .request__button {
+    padding: 21px 48px;
+    font-size: 13px;
+  }
+
+  .request__wrapper {
+    margin-bottom: 26px;
   }
 }
 
@@ -1228,7 +1311,7 @@ input[type="radio"].visually-hidden {
 
   .contacts__wrapper {
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   .contacts__subtitle {
@@ -1250,7 +1333,51 @@ input[type="radio"].visually-hidden {
   }
 
   .contacts iframe {
-    height: 432px;
+    height: 416px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    margin: 0 auto;
+    max-width: 1120px;
+  }
+
+  .contacts__title {
+    margin-bottom: 48px;
+  }
+
+  .contacts__subtitle {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .contacts__text {
+    margin-bottom: 48px;
+  }
+
+  .contacts__container {
+    display: flex;
+
+    & iframe {
+      width: 640px;
+      height: 480px;
+      order: 1;
+      margin-right: 64px;
+    }
+  }
+
+  .contacts__wrapper {
+    flex-direction: column;
+    order: 2;
+  }
+
+  .contacts__office {
+    margin-right: 0;
+  }
+
+  .contacts__shedule {
+    margin-right: 0;
   }
 }
 
@@ -1285,6 +1412,12 @@ input[type="radio"].visually-hidden {
   }
 }
 
+@media (min-width: $desktop-width) {
+  .page-footer {
+    margin-top: 56px;
+  }
+}
+
 // social-list
 
 .social-list__item {
@@ -1298,6 +1431,7 @@ input[type="radio"].visually-hidden {
   width: 48px;
   background-color: #4f4f4f;
   border-radius: 50%;
+  transition: background-color 0.2s ease;
 }
 
 .social-list__item--whatsapp svg {

@@ -91,43 +91,45 @@
               <a class="tab-nav__tab">Прихожие</a>
           </ul>
         </nav>
-        <ul class="portfolio__gallery gallery">
-          <li class="gallery__item"><a class="gallery__card" href="#">
-            <img src="img/photos/kitchen-1-small-1x.jpg" alt="">
-            <h3>Кухня в скандинавском стиле</h3>
-            <p class="gallery__button-wrapper">
-              <button class="gallery__button" href="#">Подробнее</button>
-            </p>
-          </a>
-          <li class="gallery__item"><a class="gallery__card" href="#">
-            <img src="img/photos/kitchen-2-small-1x.jpg" alt="">
-            <h3>Кухня в скандинавском стиле</h3>
-            <p class="gallery__button-wrapper">
-              <button class="gallery__button" href="#">Подробнее</button>
-            </p>
-          </a>
-          <li class="gallery__item"><a class="gallery__card" href="#">
-            <img src="img/photos/kitchen-3-small-1x.jpg" alt="">
-            <h3>Кухня в скандинавском стиле</h3>
-            <p class="gallery__button-wrapper">
-              <button class="gallery__button" href="#">Подробнее</button>
-            </p>
-          </a>
-          <li class="gallery__item"><a class="gallery__card" href="#">
-            <img src="img/photos/kitchen-3-small-1x.jpg" alt="">
-            <h3>Кухня в скандинавском стиле</h3>
-            <p class="gallery__button-wrapper">
-              <button class="gallery__button" href="#">Подробнее</button>
-            </p>
-          </a>
-          <li class="gallery__item"><a class="gallery__card" href="#">
-            <img src="img/photos/kitchen-3-small-1x.jpg" alt="">
-            <h3>Кухня в скандинавском стиле</h3>
-            <p class="gallery__button-wrapper">
-              <button class="gallery__button" href="#">Подробнее</button>
-            </p>
-          </a>
-        </ul>
+        <div class="portfolio__gallery-wrapper">
+          <ul class="portfolio__gallery gallery">
+            <li class="gallery__item"><a class="gallery__card" href="#">
+              <img src="img/photos/kitchen-1-small-1x.jpg" alt="">
+              <h3>Кухня в скандинавском стиле</h3>
+              <p class="gallery__button-wrapper">
+                <button class="gallery__button" href="#">Подробнее</button>
+              </p>
+            </a>
+            <li class="gallery__item"><a class="gallery__card" href="#">
+              <img src="img/photos/kitchen-2-small-1x.jpg" alt="">
+              <h3>Кухня в скандинавском стиле</h3>
+              <p class="gallery__button-wrapper">
+                <button class="gallery__button" href="#">Подробнее</button>
+              </p>
+            </a>
+            <li class="gallery__item"><a class="gallery__card" href="#">
+              <img src="img/photos/kitchen-3-small-1x.jpg" alt="">
+              <h3>Кухня в скандинавском стиле</h3>
+              <p class="gallery__button-wrapper">
+                <button class="gallery__button" href="#">Подробнее</button>
+              </p>
+            </a>
+            <li class="gallery__item"><a class="gallery__card" href="#">
+              <img src="img/photos/kitchen-3-small-1x.jpg" alt="">
+              <h3>Кухня в скандинавском стиле</h3>
+              <p class="gallery__button-wrapper">
+                <button class="gallery__button" href="#">Подробнее</button>
+              </p>
+            </a>
+            <li class="gallery__item"><a class="gallery__card" href="#">
+              <img src="img/photos/kitchen-3-small-1x.jpg" alt="">
+              <h3>Кухня в скандинавском стиле</h3>
+              <p class="gallery__button-wrapper">
+                <button class="gallery__button" href="#">Подробнее</button>
+              </p>
+            </a>
+          </ul>
+        </div>
         <!-- <p class="portfolio__toggles slider__toggles">
           <button class="slider__toggle" type="button" name="button">1</button>
           <button class="slider__toggle" type="button" name="button">2</button>
@@ -176,55 +178,57 @@
         </ul>
       </section>
 
-      <section class="request container">
-        <h2 class="request__title index-h2">Оставить заявку на бесплатный замер</h2>
-        <p class="request__text">Это ни к чему Вас не обязывает и помогает точно оценить стоимость будущего проекта</p>
-        <form class="request__form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="request__form-input">
-            <label for="request__name" class="visually-hidden">Ваше имя</label>
-            <input id="request__name" type="text" name="name" value="" placeholder="Ваше имя">
-          </p>
-          <p class="request__form-input">
-            <label for="request__phone" class="visually-hidden">Ваш телефон</label>
-            <input id="requst__phone" type="tel" name="phone" value="" placeholder="Телефон">
-          </p>
-          <div class="request__wrapper">
-            <button class="request__button button" type="button" name="submit">Оставить заявку</button>
-            <p class="request__text-write">или напишите нам</p>
-            <ul class="request__social-list">
-              <li class="social-list__item">
-                <a href="#" class="social-list__item-link social-list__item--whatsapp">
-                  <span class="visually-hidden">Whatsapp</span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.1718 3.72412C17.9895 1.53662 15.0833 0.333496 11.9947 0.333496C5.61971 0.333496 0.43221 5.521 0.43221 11.896C0.43221 13.9325 0.96346 15.922 1.97388 17.6772L0.333252 23.6668L6.46346 22.0575C8.15096 22.9793 10.052 23.4637 11.9895 23.4637H11.9947C18.3645 23.4637 23.6666 18.2762 23.6666 11.9012C23.6666 8.81266 22.3541 5.91162 20.1718 3.72412ZM11.9947 21.5158C10.2655 21.5158 8.57283 21.0522 7.09888 20.1772L6.74992 19.9689L3.1145 20.922L4.08325 17.3752L3.85409 17.0106C2.89054 15.4793 2.38534 13.7137 2.38534 11.896C2.38534 6.59912 6.69784 2.28662 11.9999 2.28662C14.5676 2.28662 16.9791 3.28662 18.7916 5.10433C20.6041 6.92204 21.7187 9.3335 21.7135 11.9012C21.7135 17.2033 17.2916 21.5158 11.9947 21.5158ZM17.2655 14.3179C16.9791 14.172 15.5572 13.4741 15.2916 13.3804C15.026 13.2814 14.8333 13.2345 14.6405 13.5262C14.4478 13.8179 13.8958 14.4637 13.7239 14.6616C13.5572 14.8543 13.3853 14.8804 13.0989 14.7345C11.401 13.8856 10.2864 13.2189 9.16659 11.297C8.86971 10.7866 9.46346 10.8231 10.0155 9.71891C10.1093 9.52621 10.0624 9.35954 9.9895 9.21371C9.91658 9.06787 9.33846 7.646 9.09888 7.06787C8.8645 6.50537 8.62492 6.5835 8.44784 6.57308C8.28117 6.56266 8.08846 6.56266 7.89575 6.56266C7.70304 6.56266 7.39054 6.63558 7.12492 6.92204C6.85929 7.2137 6.1145 7.91162 6.1145 9.3335C6.1145 10.7554 7.15096 12.1304 7.29159 12.3231C7.43742 12.5158 9.32804 15.4325 12.2291 16.6877C14.0624 17.4793 14.7812 17.547 15.6978 17.4116C16.2551 17.3283 17.4062 16.7137 17.6458 16.0366C17.8853 15.3595 17.8853 14.7814 17.8124 14.6616C17.7447 14.5314 17.552 14.4585 17.2655 14.3179Z" fill="#F2F2F2"/>
-                  </svg>
-              </a>
-              </li>
-              <li class="social-list__item">
-                <a href="#" class="social-list__item-link social-list__item--telegram">
-                  <span class="visually-hidden">Telegram</span>
-                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.1447 4.31448L18.8439 19.8809C18.5949 20.9795 17.9455 21.253 17.0226 20.7354L11.9933 17.0293L9.56659 19.3633C9.29803 19.6319 9.07342 19.8565 8.55584 19.8565L8.91717 14.7344L18.2385 6.31155C18.6437 5.95022 18.1506 5.75003 17.6086 6.11136L6.08514 13.3672L1.1242 11.8145C0.0451011 11.4776 0.0255697 10.7354 1.34881 10.2178L20.7531 2.74222C21.6515 2.4053 22.4377 2.94241 22.1447 4.31448V4.31448Z" fill="#F2F2F2"/>
-                  </svg>
-              </a>
-              </li>
-              <li class="social-list__item">
-                <a href="#" class="social-list__item-link social-list__item--vk">
-                  <span class="visually-hidden">ВКонтакте</span>
-                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24.504 6.53068C24.6726 5.96102 24.504 5.54175 23.6928 5.54175H21.0085C20.325 5.54175 20.0105 5.90177 19.8419 6.30282C19.8419 6.30282 18.4747 9.6342 16.5424 11.7944C15.918 12.4187 15.6309 12.6192 15.2891 12.6192C15.1205 12.6192 14.8608 12.4187 14.8608 11.849V6.53068C14.8608 5.84709 14.6694 5.54175 14.1042 5.54175H9.8842C9.45581 5.54175 9.2006 5.86076 9.2006 6.15698C9.2006 6.80412 10.1667 6.95451 10.267 8.77743V12.7332C10.267 13.599 10.1121 13.7585 9.77026 13.7585C8.8588 13.7585 6.64396 10.4135 5.33146 6.58537C5.06714 5.84253 4.80737 5.54175 4.11922 5.54175H1.43498C0.669352 5.54175 0.514404 5.90177 0.514404 6.30282C0.514404 7.01375 1.42586 10.5457 4.75724 15.2123C6.97664 18.3979 10.1029 20.1251 12.9467 20.1251C14.6557 20.1251 14.8653 19.7423 14.8653 19.0815C14.8653 16.0372 14.7104 15.7501 15.5671 15.7501C15.9636 15.7501 16.6472 15.9506 18.2423 17.4864C20.0652 19.3093 20.366 20.1251 21.3868 20.1251H24.071C24.8367 20.1251 25.224 19.7423 25.0007 18.9858C24.4903 17.3953 21.0404 14.1231 20.8855 13.9044C20.489 13.394 20.6029 13.1661 20.8855 12.7104C20.8901 12.7058 24.1667 8.09383 24.504 6.53068Z" fill="#F2F2F2"/>
-                  </svg>
-              </a>
-              </li>
-            </ul>
-          </div>
-        </form>
-        <p class="request__note">Оставляя заявку, Вы принимаете условия <a href="#">Политики защиты персональной информации</a></p>
+      <section class="request">
+        <div class="container">
+          <h2 class="request__title index-h2">Оставить заявку на бесплатный замер</h2>
+          <p class="request__text">Это ни к чему Вас не обязывает и помогает точно оценить стоимость будущего проекта</p>
+          <form class="request__form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="request__form-input">
+              <label for="request__name" class="visually-hidden">Ваше имя</label>
+              <input id="request__name" type="text" name="name" value="" placeholder="Ваше имя">
+            </p>
+            <p class="request__form-input">
+              <label for="request__phone" class="visually-hidden">Ваш телефон</label>
+              <input id="requst__phone" type="tel" name="phone" value="" placeholder="Телефон">
+            </p>
+            <div class="request__wrapper">
+              <button class="request__button button" type="button" name="submit">Оставить заявку</button>
+              <p class="request__text-write">или напишите нам</p>
+              <ul class="request__social-list">
+                <li class="social-list__item">
+                  <a href="#" class="social-list__item-link social-list__item--whatsapp">
+                    <span class="visually-hidden">Whatsapp</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.1718 3.72412C17.9895 1.53662 15.0833 0.333496 11.9947 0.333496C5.61971 0.333496 0.43221 5.521 0.43221 11.896C0.43221 13.9325 0.96346 15.922 1.97388 17.6772L0.333252 23.6668L6.46346 22.0575C8.15096 22.9793 10.052 23.4637 11.9895 23.4637H11.9947C18.3645 23.4637 23.6666 18.2762 23.6666 11.9012C23.6666 8.81266 22.3541 5.91162 20.1718 3.72412ZM11.9947 21.5158C10.2655 21.5158 8.57283 21.0522 7.09888 20.1772L6.74992 19.9689L3.1145 20.922L4.08325 17.3752L3.85409 17.0106C2.89054 15.4793 2.38534 13.7137 2.38534 11.896C2.38534 6.59912 6.69784 2.28662 11.9999 2.28662C14.5676 2.28662 16.9791 3.28662 18.7916 5.10433C20.6041 6.92204 21.7187 9.3335 21.7135 11.9012C21.7135 17.2033 17.2916 21.5158 11.9947 21.5158ZM17.2655 14.3179C16.9791 14.172 15.5572 13.4741 15.2916 13.3804C15.026 13.2814 14.8333 13.2345 14.6405 13.5262C14.4478 13.8179 13.8958 14.4637 13.7239 14.6616C13.5572 14.8543 13.3853 14.8804 13.0989 14.7345C11.401 13.8856 10.2864 13.2189 9.16659 11.297C8.86971 10.7866 9.46346 10.8231 10.0155 9.71891C10.1093 9.52621 10.0624 9.35954 9.9895 9.21371C9.91658 9.06787 9.33846 7.646 9.09888 7.06787C8.8645 6.50537 8.62492 6.5835 8.44784 6.57308C8.28117 6.56266 8.08846 6.56266 7.89575 6.56266C7.70304 6.56266 7.39054 6.63558 7.12492 6.92204C6.85929 7.2137 6.1145 7.91162 6.1145 9.3335C6.1145 10.7554 7.15096 12.1304 7.29159 12.3231C7.43742 12.5158 9.32804 15.4325 12.2291 16.6877C14.0624 17.4793 14.7812 17.547 15.6978 17.4116C16.2551 17.3283 17.4062 16.7137 17.6458 16.0366C17.8853 15.3595 17.8853 14.7814 17.8124 14.6616C17.7447 14.5314 17.552 14.4585 17.2655 14.3179Z" fill="#F2F2F2"/>
+                    </svg>
+                </a>
+                </li>
+                <li class="social-list__item">
+                  <a href="#" class="social-list__item-link social-list__item--telegram">
+                    <span class="visually-hidden">Telegram</span>
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.1447 4.31448L18.8439 19.8809C18.5949 20.9795 17.9455 21.253 17.0226 20.7354L11.9933 17.0293L9.56659 19.3633C9.29803 19.6319 9.07342 19.8565 8.55584 19.8565L8.91717 14.7344L18.2385 6.31155C18.6437 5.95022 18.1506 5.75003 17.6086 6.11136L6.08514 13.3672L1.1242 11.8145C0.0451011 11.4776 0.0255697 10.7354 1.34881 10.2178L20.7531 2.74222C21.6515 2.4053 22.4377 2.94241 22.1447 4.31448V4.31448Z" fill="#F2F2F2"/>
+                    </svg>
+                </a>
+                </li>
+                <li class="social-list__item">
+                  <a href="#" class="social-list__item-link social-list__item--vk">
+                    <span class="visually-hidden">ВКонтакте</span>
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.504 6.53068C24.6726 5.96102 24.504 5.54175 23.6928 5.54175H21.0085C20.325 5.54175 20.0105 5.90177 19.8419 6.30282C19.8419 6.30282 18.4747 9.6342 16.5424 11.7944C15.918 12.4187 15.6309 12.6192 15.2891 12.6192C15.1205 12.6192 14.8608 12.4187 14.8608 11.849V6.53068C14.8608 5.84709 14.6694 5.54175 14.1042 5.54175H9.8842C9.45581 5.54175 9.2006 5.86076 9.2006 6.15698C9.2006 6.80412 10.1667 6.95451 10.267 8.77743V12.7332C10.267 13.599 10.1121 13.7585 9.77026 13.7585C8.8588 13.7585 6.64396 10.4135 5.33146 6.58537C5.06714 5.84253 4.80737 5.54175 4.11922 5.54175H1.43498C0.669352 5.54175 0.514404 5.90177 0.514404 6.30282C0.514404 7.01375 1.42586 10.5457 4.75724 15.2123C6.97664 18.3979 10.1029 20.1251 12.9467 20.1251C14.6557 20.1251 14.8653 19.7423 14.8653 19.0815C14.8653 16.0372 14.7104 15.7501 15.5671 15.7501C15.9636 15.7501 16.6472 15.9506 18.2423 17.4864C20.0652 19.3093 20.366 20.1251 21.3868 20.1251H24.071C24.8367 20.1251 25.224 19.7423 25.0007 18.9858C24.4903 17.3953 21.0404 14.1231 20.8855 13.9044C20.489 13.394 20.6029 13.1661 20.8855 12.7104C20.8901 12.7058 24.1667 8.09383 24.504 6.53068Z" fill="#F2F2F2"/>
+                    </svg>
+                </a>
+                </li>
+              </ul>
+            </div>
+          </form>
+          <p class="request__note">Оставляя заявку, Вы принимаете условия <a href="#">Политики защиты персональной информации</a></p>
+        </div>
       </section>
 
       <section class="contacts">
-        <div class="container">
-          <h2 class="contacts__title index-h2">Контакты</h2>
+        <h2 class="contacts__title index-h2">Контакты</h2>
+        <div class="contacts__container">
           <div class="contacts__wrapper">
             <div class="contacts__office" style="width: 200px">
               <h3 class="contacts__subtitle">Офис:</h3>
@@ -239,8 +243,8 @@
               <p class="contacts__text">+7 (8362) 45-88-43<br>+7 960 095-69-37</p>
             </div>
           </div>
+          <iframe src="https://yandex.ru/map-widget/v1/-/CGGD4Aku" width="100%" height="240" frameborder="0" allowfullscreen="true"></iframe>
         </div>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CGGD4Aku" width="100%" height="240" frameborder="0" allowfullscreen="true"></iframe>
       </section>
     </main>
 
