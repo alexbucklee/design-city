@@ -111,7 +111,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   color: #ffffff;
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.06);
-  transition: all 0.2s ease;
+  transition: background-color 0.1s ease, box-shadow 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
 .button:active {
@@ -820,9 +820,6 @@ input[type="radio"].visually-hidden {
   .gallery__card {
     width: 268px;
   }
-  .gallery__card h3 {
-    font-size: 16px;
-  }
 }
 @media (max-width: 767px) {
   .advantages {
@@ -1101,7 +1098,7 @@ input[type="radio"].visually-hidden {
 
   .request__button {
     margin: 0;
-    padding: 22px 56px;
+    padding: 22px 54px;
     display: inline-block;
     border-radius: 28px;
   }
@@ -1141,6 +1138,7 @@ input[type="radio"].visually-hidden {
   }
 
   .request__button {
+    padding: 21px 48px;
     font-size: 13px;
   }
 
@@ -1292,7 +1290,7 @@ input[type="radio"].visually-hidden {
   width: 48px;
   background-color: #4f4f4f;
   border-radius: 50%;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.1s ease;
 }
 
 .social-list__item--whatsapp svg {
