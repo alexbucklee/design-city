@@ -465,6 +465,13 @@ input[type="radio"].visually-hidden {
     line-height: 32px;
     color: inherit;
     opacity: 0.75;
+
+    transition: all 0.1s ease;
+
+    &:hover {
+      // background: rgba(62, 198, 64, 0.10);
+      opacity: 1;
+    }
   }
 
   .site-list__item--active a {
@@ -669,6 +676,22 @@ input[type="radio"].visually-hidden {
    }
 }
 
+@media (min-width: 1280px) {
+  .welcome__col-1 {
+    text-align: left;
+  }
+
+  .welcome__intro {
+    float: right;
+    margin-right: 125px;
+  }
+
+  .welcome__button {
+    float: right;
+    margin-right: 247px;
+  }
+}
+
 // portfolio
 
 @media (min-width: $mobile-width) {
@@ -711,6 +734,8 @@ input[type="radio"].visually-hidden {
     white-space: nowrap;
     line-height: 48px;
     opacity: 0.75;
+
+    cursor: pointer;
   }
 
   .tab-nav__tab--current {
@@ -850,8 +875,8 @@ input[type="radio"].visually-hidden {
   }
 
   .tab-nav__item {
-
     margin: 0;
+    transition: all 0.1s ease;
 
     &:first-child .tab-nav__tab {
       margin-left: 24px;
@@ -864,6 +889,20 @@ input[type="radio"].visually-hidden {
 
   .tab-nav__tab {
     margin: 0;
+    transition: all 0.1s ease;
+
+    &:hover {
+      opacity: 1;
+      background: rgba(62, 198, 64, 0.10);
+    }
+  }
+
+  .tab-nav__tab--current {
+
+    &:hover {
+      cursor: default;
+      background-color: inherit;
+    }
   }
 
   .gallery__item {
@@ -1348,7 +1387,7 @@ input[type="radio"].visually-hidden {
   }
 
   .contacts__subtitle {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
   }
 
@@ -1363,7 +1402,7 @@ input[type="radio"].visually-hidden {
       width: 640px;
       height: 480px;
       order: 1;
-      margin-right: 64px;
+      margin-right: 48px;
     }
   }
 
