@@ -13,7 +13,10 @@
       <div class="page-header__wrapper container">
         <div class="page-header__wrapper-wrapper">
           <a class="page-header__logo">
-            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="130px" height="20px;" alt="Логотип «Дизайн-Сити»">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo-header.svg">
+              <img class="page-header__logo-image" src="img/logo-mobile.svg" width="130px" height="20px;" alt="Логотип «Дизайн-Сити»">
+            </picture>
           </a>
           <div class="page-header__info">
             <div class="page-header__address">
@@ -70,70 +73,296 @@
       </section>
 
       <section class="portfolio">
+
         <div class="container">
           <h2 id="portfolio" class="portfolio__title index-h2">Наши работы</h2>
           <p class="portfolio__text">Выберите интересующую Вас категорию</p>
         </div>
+
         <nav class="tab-nav">
           <ul class="tab-nav__list">
             <li class="tab-nav__item">
-              <a class="tab-nav__tab tab-nav__tab--current">Кухни</a>
+              <a class="tab-nav__tab tab-nav__tab--kitchens tab-nav__tab--current">Кухни</a>
             <li class="tab-nav__item">
-              <a class="tab-nav__tab">Шкафы-купе</a>
+              <a class="tab-nav__tab tab-nav__tab--cupboards">Шкафы-купе</a>
+            <li class="tab-nav__item ">
+              <a class="tab-nav__tab tab-nav__tab--living">Гостиные</a>
             <li class="tab-nav__item">
-              <a class="tab-nav__tab">Гостиные</a>
+              <a class="tab-nav__tab tab-nav__tab--office">Офисная мебель</a>
             <li class="tab-nav__item">
-              <a class="tab-nav__tab">Офисная мебель</a>
+              <a class="tab-nav__tab tab-nav__tab--wardrobe">Гардеробные</a>
             <li class="tab-nav__item">
-              <a class="tab-nav__tab">Гардеробные</a>
-            <li class="tab-nav__item">
-              <a class="tab-nav__tab">Прихожие</a>
+              <a class="tab-nav__tab tab-nav__tab--lobby">Прихожие</a>
           </ul>
         </nav>
-        <div class="portfolio__gallery-wrapper">
-          <ul class="portfolio__gallery gallery">
-            <li class="gallery__item"><a class="gallery__card" href="#">
-              <img src="img/photos/kitchen-1-small-1x.jpg" alt="">
-              <h3>Кухня в скандинавском стиле</h3>
-              <p class="gallery__button-wrapper">
-                <button class="gallery__button" href="#">Подробнее</button>
-              </p>
-            </a>
-            <li class="gallery__item"><a class="gallery__card" href="#">
-              <img src="img/photos/kitchen-2-small-1x.jpg" alt="">
-              <h3>Кухня в скандинавском стиле</h3>
-              <p class="gallery__button-wrapper">
-                <button class="gallery__button" href="#">Подробнее</button>
-              </p>
-            </a>
-            <li class="gallery__item"><a class="gallery__card" href="#">
-              <img src="img/photos/kitchen-3-small-1x.jpg" alt="">
-              <h3>Кухня в скандинавском стиле</h3>
-              <p class="gallery__button-wrapper">
-                <button class="gallery__button" href="#">Подробнее</button>
-              </p>
-            </a>
-            <li class="gallery__item"><a class="gallery__card" href="#">
-              <img src="img/photos/kitchen-3-small-1x.jpg" alt="">
-              <h3>Кухня в скандинавском стиле</h3>
-              <p class="gallery__button-wrapper">
-                <button class="gallery__button" href="#">Подробнее</button>
-              </p>
-            </a>
-            <li class="gallery__item"><a class="gallery__card" href="#">
-              <img src="img/photos/kitchen-3-small-1x.jpg" alt="">
-              <h3>Кухня в скандинавском стиле</h3>
-              <p class="gallery__button-wrapper">
-                <button class="gallery__button" href="#">Подробнее</button>
-              </p>
-            </a>
-          </ul>
+
+        <div class="portfolio__scroll-hider">
+          <div class="arrows-wrapper arrows-wrapper--right">
+            <div class="arrow arrow--right"></div>
+          </div>
+          <div class="arrows-wrapper arrows-wrapper--left">
+            <div class="arrow arrow--left"></div>
+          </div>
+          <div class="portfolio__gallery-wrapper">
+
+            <div class="portfolio__gallery gallery gallery--kitchens">
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Кухня в скандинавском стиле</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Кухня в скандинавском стиле</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Кухня в скандинавском стиле</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Кухня в скандинавском стиле</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Кухня в скандинавском стиле</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Кухня в скандинавском стиле</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Кухня в скандинавском стиле</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Кухня в скандинавском стиле</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="portfolio__gallery gallery--cupboards">
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Шкаф-1</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Шкаф-2</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Шкаф-3</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Шкаф-4</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Шкаф-5</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Шкаф-6</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="portfolio__gallery gallery--living">
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Гостиная-1</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Гостиная-1</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Гостиная-1</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Гостиная-1</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="portfolio__gallery gallery--office">
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Офис-1</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="portfolio__gallery gallery--wardrobe">
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Гардероб-1</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="portfolio__gallery gallery--lobby">
+
+              <div class="gallery__item">
+                <a class="gallery__card" href="#">
+                  <h3>Прихожая-1</h3>
+                  <!-- <p class="gallery__button-wrapper">
+                  <button class="gallery__button" href="#">Подробнее</button>
+                  </p> -->
+                  <span class="gallery__card-overlay"></span>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
         </div>
-        <!-- <p class="portfolio__toggles slider__toggles">
-          <button class="slider__toggle" type="button" name="button">1</button>
-          <button class="slider__toggle" type="button" name="button">2</button>
-          <button class="slider__toggle" type="button" name="button">3</button>
-        </p> -->
+
       </section>
 
       <!-- <section class="advantages">
@@ -155,23 +384,28 @@
         <h2 class="process__title index-h2">Как мы работаем</h2>
         <ul class="process__list">
           <li class="process__item">
-            <h3>1. Заявка 📝</h3>
+            <b class="process__item-number">01</b>
+            <h3>Заявка 📝</h3>
             <p>Оставьте заявку удобным для Вас способом.</p>
           </li>
           <li class="process__item">
-            <h3>2. Бесплатный замер 📐</h3>
+            <b class="process__item-number">02</b>
+            <h3>Бесплатный замер 📐</h3>
             <p>Бесплатно сделаем замеры и обсудим c Вами дополнительные детали.</p>
           </li>
           <li class="process__item">
-            <h3>3. Разработка проекта 🖥</h3>
+            <b class="process__item-number">03</b>
+            <h3>Разработка проекта 🖥</h3>
             <p>Бесплатно разработаем дизайн-проект и согласуем с Вами.</p>
           </li>
           <li class="process__item">
-            <h3>4. Производство 🛠️</h3>
+            <b class="process__item-number">04</b>
+            <h3>Производство 🛠️</h3>
             <p>После согласования проекта мы отправляем мебель на производство.</p>
           </li>
           <li class="process__item">
-            <h3>5. Доставка и установка 🚚</h3>
+            <b class="process__item-number">05</b>
+            <h3>Доставка и установка 🚚</h3>
             <p>Доставим и установим готовую мебель бесплатно. И мусор за собой уберём.</p>
           </li>
         </ul>
@@ -279,5 +513,8 @@
           document.write("2001-"+ new Date().getFullYear()+ "");
         </script> «Дизайн-Сити»</p>
     </footer>
+
+    <script type="text/javascript" src="js/script.js">
+    </script>
   </body>
 </html>

@@ -766,18 +766,20 @@ input[type="radio"].visually-hidden {
   }
 
   .gallery {
+    display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    white-space: nowrap;
+    transition: all 0.3s ease;
+    &--cupboards, &--living, &--office, &--wardrobe, &--lobby {
+      display: none;
+    }
   }
 
   .gallery__item {
-    display: inline-block;
-    padding-top: 8px;
-    padding-bottom: 32px;
+    margin-top: 8px;
+    margin-bottom: 32px;
+    margin-right: 16px;
 
     & img {
       border-radius: 4px 4px 0px 0px;
@@ -791,31 +793,79 @@ input[type="radio"].visually-hidden {
 
   .gallery__card {
     display: block;
-    margin-right: 16px;
-    width: 224px;
-    color: inherit;
+    position: relative;
+    // margin-right: 16px;
+    width: 268px;
+    height: 200px;
+    color: #ffffff;
     text-decoration: none;
     white-space: nowrap;
     border-radius: 4px;
-    background: #FFFFFF;
-    box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.06);
+    background-image: url("../img/photos/kitchen-1-small-1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.06);
     white-space: normal;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 
-    & h3 {
-      margin: 8px 16px 24px;
+    & h3, .gallery__card-about {
+      position: absolute;
+      bottom: 0;
+      margin: 0 16px 8px;
       font-size: 14px;
       line-height: 24px;
       font-weight: 400;
+      transition: all 0.3s ease;
     }
 
     & a {
       margin: 0;
     }
 
-    &:hover {
-      transform: translateY(-8px);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 80px;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+      border-radius: 0 0 4px 4px;
     }
+
+    &:hover {
+      transform: translateY(-6px);
+      transition: all 0.3s ease;
+    }
+
+    &:hover h3 {
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    &:hover .gallery__card-overlay {
+      opacity: 0.6;
+    }
+
+    &:hover .gallery__card-about {
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .gallery__card-about {
+    opacity: 0;
+  }
+
+  .gallery__card-overlay {
+    // display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #17BF6F 0%, #64CC12 100%);
+    opacity: 0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
   }
 
   .gallery__button-wrapper {
@@ -833,6 +883,18 @@ input[type="radio"].visually-hidden {
     border: none;
     background: none;
     color: #3EC640;
+  }
+
+  .portfolio__gallery-wrapper {
+    position: relative;
+    margin-bottom: -48px;
+    padding-bottom: 48px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+
+  .portfolio__scroll-hider {
+    overflow: hidden;
   }
 }
 
@@ -914,6 +976,11 @@ input[type="radio"].visually-hidden {
         margin-left: 0;
       }
     }
+
+    &:last-child {
+      margin-right: 0px;
+      padding-right: 24px;
+    }
   }
 }
 
@@ -941,25 +1008,78 @@ input[type="radio"].visually-hidden {
   }
 
   .portfolio__gallery-wrapper {
-    overflow: hidden;
+    max-width: 1168px;
+    margin: 0 auto -48px;
   }
 
   .portfolio__gallery {
-    margin: 0 auto;
-    margin-bottom: -48px;
-    padding-bottom: 48px;
-    max-width: 1168px;
+    // margin: 0 auto;
+    // max-width: 1168px;
   }
 
   .gallery__item {
-    padding-top: 16px;
+    margin-top: 16px;
   }
 
   .gallery__card {
-    width: 268px;
+    // width: 268px;
 
     & h3 {
       // font-size: 16px;
+    }
+  }
+
+  .portfolio__scroll-hider {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+
+  .arrows-wrapper {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 80px;
+    z-index: 5;
+    background-color: #ffffff;
+
+    &--right {
+      right: 0;
+    }
+
+    &--left {
+      left: 0;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    top: 92px;
+    z-index: 10;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      width: 16px;
+      height: 16px;
+      background-image: url("../img/icons/arrow.svg");
+    }
+
+    &--right {
+      left: -24px;
+    }
+
+    &--left {
+      right: -24px;
+      transform: scale(-1, 1);
     }
   }
 }
@@ -1047,6 +1167,20 @@ input[type="radio"].visually-hidden {
 
 // process
 
+.process__item-number {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 48px;
+  background: linear-gradient(90deg, #17BF6F 0%, #64CC12 100%);
+  opacity: 0.4;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #3EC640;
+}
+
 @media (min-width: $mobile-width) {
   .process__title {
     margin-bottom: 32px;
@@ -1089,7 +1223,7 @@ input[type="radio"].visually-hidden {
 
   .process__title {
     margin: 0;
-    margin-top: 8px;
+    // margin-top: 8px;
   }
 
   .process__item {
@@ -1126,7 +1260,7 @@ input[type="radio"].visually-hidden {
 
 @media (min-width: $desktop-width) {
   .process__title {
-    margin-top: 32px;
+    // margin-top: 32px;
   }
 
   .process__list {
@@ -1135,7 +1269,7 @@ input[type="radio"].visually-hidden {
   }
 
   .process__item h3 {
-    margin-top: 56px;
+    margin-top: 88px;
     font-size: 24px;
   }
 
