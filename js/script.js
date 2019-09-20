@@ -117,3 +117,13 @@ arrowLeft.addEventListener("click", function (evt) {
   position = position + 284;
   gallery.style.transform = "translateX(" +position+ "px)";
 });
+
+document.querySelector(".portfolio__kitchen-1").addEventListener("click", function (evt) {
+  evt.preventDefault();
+  document.querySelector(".modal").style.display = "block";
+})
+
+document.querySelector(".modal__overlay").addEventListener("click", function (evt) {
+  evt.preventDefault();
+  document.querySelector(".modal").style.display = "none";
+})
