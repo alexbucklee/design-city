@@ -132,7 +132,7 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   margin: 0 auto;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.075em;
@@ -790,7 +790,7 @@ input[type="radio"].visually-hidden {
   }
 
   &:last-child .tab-nav__tab {
-    margin-right: 16px;
+    // margin-right: 16px;
   }
 }
 
@@ -1791,7 +1791,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/icons/dot.svg");
   background-repeat: no-repeat;
   background-position: center;
-  left: -20px;
+  left: -21px;
   top: 3px;
   opacity: 0.8;
 }
@@ -1965,15 +1965,6 @@ input[type="radio"].visually-hidden {
 // mobile 360px
 
 @media (min-width: $mobile-width-360) {
-  .tab-nav__item {
-    &:first-child {
-      // margin-left: 8px;
-    }
-  }
-
-  .tab-nav__list::after {
-    left: 32px;
-  }
 
   .technologies__text {
     margin-right: 24px;

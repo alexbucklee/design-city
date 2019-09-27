@@ -69,7 +69,7 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   margin: 0 auto;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.075em;
@@ -630,9 +630,6 @@ input[type="radio"].visually-hidden {
 
 .tab-nav__item {
   display: inline-block;
-}
-.tab-nav__item:last-child .tab-nav__tab {
-  margin-right: 16px;
 }
 
 .portfolio__gallery {
@@ -1529,7 +1526,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/icons/dot.svg");
   background-repeat: no-repeat;
   background-position: center;
-  left: -20px;
+  left: -21px;
   top: 3px;
   opacity: 0.8;
 }
@@ -1676,10 +1673,6 @@ input[type="radio"].visually-hidden {
 }
 
 @media (min-width: 360px) {
-  .tab-nav__list::after {
-    left: 32px;
-  }
-
   .technologies__text {
     margin-right: 24px;
   }
