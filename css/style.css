@@ -18,7 +18,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  vertical-align: bottom;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -40,7 +39,7 @@ input[type="radio"].visually-hidden {
   padding: 0 16px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 360px) {
   .container {
     padding: 0 24px;
   }
@@ -102,7 +101,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   z-index: 5;
   box-sizing: border-box;
-  padding-top: 10px;
+  padding-top: 18px;
   height: 56px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.06);
 }
@@ -430,9 +429,9 @@ input[type="radio"].visually-hidden {
 .welcome__button {
   position: relative;
   margin: 0 auto 30px;
-  padding: 18px 40px;
+  padding: 22px 47px;
   background: #3EC640;
-  border-radius: 24px;
+  border-radius: 32px;
 }
 .welcome__button:hover {
   background: #46E049;
@@ -458,12 +457,12 @@ input[type="radio"].visually-hidden {
   .welcome__intro {
     position: relative;
     z-index: 1;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     display: block;
     text-align: center;
-    font-size: 30px;
+    font-size: 9.375vw;
     font-weight: 700;
-    line-height: 40px;
+    line-height: 11.25vw;
   }
 
   .welcome__arrow-button {
@@ -612,14 +611,6 @@ input[type="radio"].visually-hidden {
   opacity: 0.6;
   cursor: pointer;
 }
-.tab-nav__tab:hover {
-  opacity: 1;
-  background: rgba(62, 198, 64, 0.15);
-  border-radius: 4px;
-}
-.tab-nav__tab:active {
-  background: rgba(62, 198, 64, 0.3);
-}
 
 .tab-nav__tab--current {
   opacity: 1;
@@ -651,12 +642,9 @@ input[type="radio"].visually-hidden {
 .gallery {
   display: flex;
   margin: 0;
-  padding: 0 16px;
+  padding: 0;
   list-style: none;
   transition: all 0.3s ease;
-}
-.gallery--cupboards, .gallery--living, .gallery--office, .gallery--wardrobe, .gallery--lobby {
-  display: none;
 }
 
 .gallery__item {
@@ -666,6 +654,9 @@ input[type="radio"].visually-hidden {
 .gallery__item img {
   border-radius: 4px 4px 0px 0px;
   width: 100%;
+}
+.gallery__item:last-child .gallery__card {
+  margin-right: 16px;
 }
 
 .gallery__card {
@@ -857,6 +848,14 @@ input[type="radio"].visually-hidden {
   .tab-nav__tab {
     padding: 0 48px;
     font-size: 18px;
+  }
+  .tab-nav__tab:hover {
+    opacity: 1;
+    background: rgba(62, 198, 64, 0.15);
+    border-radius: 4px;
+  }
+  .tab-nav__tab:active {
+    background: rgba(62, 198, 64, 0.3);
   }
 
   .portfolio__gallery-wrapper {
@@ -1164,11 +1163,11 @@ input[type="radio"].visually-hidden {
 .request__button {
   display: block;
   margin: 32px auto 24px;
-  padding: 18px 42px;
+  padding: 22px 50px;
   color: #ffffff;
   background: #3EC640;
   border: none;
-  border-radius: 24px;
+  border-radius: 32px;
 }
 .request__button:hover {
   background: #46E049;
@@ -1281,7 +1280,7 @@ input[type="radio"].visually-hidden {
 
 .contacts__appeal {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   font-weight: 300;
 }
 
@@ -1490,7 +1489,7 @@ input[type="radio"].visually-hidden {
 .technologies__image {
   position: relative;
   padding-top: 24px;
-  height: 584px;
+  padding-bottom: 32px;
   box-sizing: border-box;
   background-image: url("../img/technologies-image.jpg");
   background-size: auto 100%;
@@ -1519,6 +1518,9 @@ input[type="radio"].visually-hidden {
   color: #e0e0e0;
   z-index: 5;
 }
+.technologies__text--4 {
+  margin-bottom: 0;
+}
 
 .technologies__dot {
   position: absolute;
@@ -1527,20 +1529,9 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/icons/dot.svg");
   background-repeat: no-repeat;
   background-position: center;
-  left: 5%;
+  left: -20px;
+  top: 3px;
   opacity: 0.8;
-}
-.technologies__dot--1 {
-  top: 21%;
-}
-.technologies__dot--2 {
-  top: 43%;
-}
-.technologies__dot--3 {
-  top: 64.9%;
-}
-.technologies__dot--4 {
-  top: 82.7%;
 }
 
 @media (min-width: 768px) {
@@ -1682,6 +1673,20 @@ input[type="radio"].visually-hidden {
 }
 .catalog-item__info tr:nth-child(5) th, .catalog-item__info tr:nth-child(5) td {
   padding-top: 16px;
+}
+
+@media (min-width: 360px) {
+  .tab-nav__list::after {
+    left: 32px;
+  }
+
+  .technologies__text {
+    margin-right: 24px;
+  }
+
+  .contacts__wrapper {
+    margin: 0 24px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
