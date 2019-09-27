@@ -1,12 +1,6 @@
 var arrowRight = document.querySelector(".arrow--right");
 var arrowLeft = document.querySelector(".arrow--left");
 var position = 0;
-var kitchens = document.querySelector(".tab-nav__tab--kitchens");
-var cupboards = document.querySelector(".tab-nav__tab--cupboards");
-var living = document.querySelector(".tab-nav__tab--living");
-var office = document.querySelector(".tab-nav__tab--office");
-var wardrobe = document.querySelector(".tab-nav__tab--wardrobe");
-var lobby = document.querySelector(".tab-nav__tab--lobby");
 
 function hideArrows() {
   var slides = document.querySelectorAll(".gallery > .gallery__item");
@@ -20,65 +14,24 @@ function hideArrows() {
   }
 }
 
-kitchens.addEventListener("click", function(evt) {
-  document.querySelector(".tab-nav__tab--current").classList.remove("tab-nav__tab--current");
-  kitchens.classList.add("tab-nav__tab--current");
-  document.querySelector(".gallery").style.display = "none";
-  document.querySelector(".gallery").classList.remove("gallery");
-  document.querySelector(".gallery--kitchens").classList.add("gallery");
-  document.querySelector(".gallery--kitchens").style.display = "flex";
-  hideArrows();
-});
-
-cupboards.addEventListener("click", function(evt) {
-  document.querySelector(".tab-nav__tab--current").classList.remove("tab-nav__tab--current");
-  cupboards.classList.add("tab-nav__tab--current");
-  document.querySelector(".gallery").style.display = "none";
-  document.querySelector(".gallery").classList.remove("gallery");
-  document.querySelector(".gallery--cupboards").classList.add("gallery");
-  document.querySelector(".gallery--cupboards").style.display = "flex";
-  hideArrows();
-});
-
-living.addEventListener("click", function(evt) {
-  document.querySelector(".tab-nav__tab--current").classList.remove("tab-nav__tab--current");
-  living.classList.add("tab-nav__tab--current");
-  document.querySelector(".gallery").style.display = "none";
-  document.querySelector(".gallery").classList.remove("gallery");
-  document.querySelector(".gallery--living").classList.add("gallery");
-  document.querySelector(".gallery--living").style.display = "flex";
-  hideArrows();
-});
-
-office.addEventListener("click", function(evt) {
-  document.querySelector(".tab-nav__tab--current").classList.remove("tab-nav__tab--current");
-  office.classList.add("tab-nav__tab--current");
-  document.querySelector(".gallery").style.display = "none";
-  document.querySelector(".gallery").classList.remove("gallery");
-  document.querySelector(".gallery--office").classList.add("gallery");
-  document.querySelector(".gallery--office").style.display = "flex";
-  hideArrows();
-});
-
-wardrobe.addEventListener("click", function(evt) {
-  document.querySelector(".tab-nav__tab--current").classList.remove("tab-nav__tab--current");
-  wardrobe.classList.add("tab-nav__tab--current");
-  document.querySelector(".gallery").style.display = "none";
-  document.querySelector(".gallery").classList.remove("gallery");
-  document.querySelector(".gallery--wardrobe").classList.add("gallery");
-  document.querySelector(".gallery--wardrobe").style.display = "flex";
-  hideArrows();
-});
-
-lobby.addEventListener("click", function(evt) {
-  document.querySelector(".tab-nav__tab--current").classList.remove("tab-nav__tab--current");
-  lobby.classList.add("tab-nav__tab--current");
-  document.querySelector(".gallery").style.display = "none";
-  document.querySelector(".gallery").classList.remove("gallery");
-  document.querySelector(".gallery--lobby").classList.add("gallery");
-  document.querySelector(".gallery--lobby").style.display = "flex";
-  hideArrows();
-});
+document.querySelector(".tab-nav__list").addEventListener("click", function(evt) {
+  if (event.target.className == "tab-nav__tab") {
+    var dataTab = event.target.getAttribute("data-tab");
+    document.querySelector(".tab-nav__tab--current").classList.remove("tab-nav__tab--current");
+    event.target.classList.add("tab-nav__tab--current");
+    var tabBody = document.querySelectorAll(".portfolio__gallery");
+    for (var i = 0; i < tabBody.length; i++) {
+      if (dataTab == i) {
+        tabBody[i].style.display = "flex";
+        tabBody[i].classList.add("gallery");
+        hideArrows();
+      } else {
+        tabBody[i].style.display = "none";
+        tabBody[i].classList.remove("gallery");
+      }
+    }
+  }
+})
 
 arrowRight.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -127,3 +80,21 @@ document.querySelector(".modal__overlay").addEventListener("click", function (ev
   evt.preventDefault();
   document.querySelector(".modal").style.display = "none";
 })
+
+document.querySelector(".welcome__button--desktop").addEventListener("click", function (evt) {
+  evt.preventDefault();
+  var portfolio = document.querySelector("#portfolio");
+
+  getCoords(portfolio);
+
+  window.scrollTo(0, top);
+})
+
+function getCoords(portfolio) {
+  var box = portfolio.getBoundingClientRect();
+
+  return {
+    top: box.top + pageYOffset,
+    left: box.left + pageXOffset
+  };
+}

@@ -5,6 +5,7 @@
     <title>Мебель на заказ в Йошкар-Оле — Дизайн-Сити</title>
     <meta name="viewport" content="width=device,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700|Roboto:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -19,16 +20,19 @@
             </picture>
           </a>
           <div class="page-header__info">
-            <div class="page-header__address">
-              <span class="page-header__address--pin"></span>г. Йошкар-Ола,<br>
-              ул. Первомайская, д. 100
+            <div class="page-header__phone">
+              <!-- <span class="page-header__phone--phone"></span> -->
+              +7 (8362) 45-88-43 /
+              <!-- <span class="page-header__phone--mobile"></span> -->
+              +7 960 095-69-37
             </div>
-            <div class="page-header__phone"><span class="page-header__phone--phone"></span>+7 (8362) 45-88-43<br>
-              <span class="page-header__phone--mobile"></span>+7 960 095-69-37
+            <div class="page-header__address">
+              <!-- <span class="page-header__address--pin"></span> -->
+              г. Йошкар-Ола, ул. Первомайская, д. 100
             </div>
           </div>
         </div>
-        <nav class="main-nav">
+        <!-- <nav class="main-nav">
           <input id="check-menu" type="checkbox" class="visually-hidden">
           <div class="main-nav__hamb-button-line main-nav__hamb-button--first"></div>
           <div class="main-nav__hamb-button-line main-nav__hamb-button--second"></div>
@@ -39,22 +43,17 @@
             <ul class="main-nav__list site-list">
               <li class="site-list__item site-list__item--active">
                 <a>Главная</a>
-              </li>
               <li class="site-list__item">
                 <a href="#">Кухни</a>
-              </li>
               <li class="site-list__item">
                 <a href="#">Шкафы</a>
-              </li>
               <li class="site-list__item">
                 <a href="#">Гостиные</a>
-              </li>
               <li class="site-list__item">
                 <a href="#">Офисная мебель</a>
-              </li>
             </ul>
           </div>
-        </nav>
+        </nav> -->
       </div>
     </header>
 
@@ -65,9 +64,9 @@
         <div class="welcome__image">
         </div>
         <div class="welcome__col-1">
-          <b class="welcome__intro">Изготовим мебель<br>по Вашему проекту</b>
-          <a class="button welcome__button welcome__button--mobile" href="#portfolio">Посмотреть работы</a>
-          <a class="button welcome__button welcome__button--desktop" href="#portfolio">Посмотреть примеры работ</a>
+          <b class="welcome__intro">Изготовим мебель<br>по индивидуальному<br>проекту</b>
+          <a class="button welcome__button welcome__button--mobile" href="#">Посмотреть работы</a>
+          <a class="button welcome__button welcome__button--desktop" href="#">Посмотреть примеры работ</a>
           <a class="welcome__arrow-button" href="#portfolio"></a>
         </div>
       </section>
@@ -76,23 +75,23 @@
 
         <div class="container">
           <h2 id="portfolio" class="portfolio__title index-h2">Наши работы</h2>
-          <p class="portfolio__text">Выберите интересующую Вас категорию</p>
+          <p class="portfolio__text">Выберите интересующую вас категорию</p>
         </div>
 
         <nav class="tab-nav">
           <ul class="tab-nav__list">
             <li class="tab-nav__item">
-              <a class="tab-nav__tab tab-nav__tab--kitchens tab-nav__tab--current">Кухни</a>
+              <a class="tab-nav__tab tab-nav__tab--current" data-tab="0">Кухни</a>
             <li class="tab-nav__item">
-              <a class="tab-nav__tab tab-nav__tab--cupboards">Шкафы-купе</a>
+              <a class="tab-nav__tab" data-tab="1">Шкафы-купе</a>
             <li class="tab-nav__item ">
-              <a class="tab-nav__tab tab-nav__tab--living">Гостиные</a>
+              <a class="tab-nav__tab" data-tab="2">Гостиные</a>
             <li class="tab-nav__item">
-              <a class="tab-nav__tab tab-nav__tab--office">Офисная мебель</a>
+              <a class="tab-nav__tab" data-tab="3">Офисная мебель</a>
             <li class="tab-nav__item">
-              <a class="tab-nav__tab tab-nav__tab--wardrobe">Гардеробные</a>
+              <a class="tab-nav__tab" data-tab="4">Гардеробные</a>
             <li class="tab-nav__item">
-              <a class="tab-nav__tab tab-nav__tab--lobby">Прихожие</a>
+              <a class="tab-nav__tab" data-tab="5">Прихожие</a>
           </ul>
         </nav>
 
@@ -105,7 +104,7 @@
           </div>
           <div class="portfolio__gallery-wrapper">
 
-            <div class="portfolio__gallery gallery gallery--kitchens">
+            <div class="portfolio__gallery gallery" style="display: flex">
 
               <div class="gallery__item">
                 <a class="gallery__card  portfolio__kitchen-1" href="#">
@@ -197,7 +196,7 @@
 
             </div>
 
-            <div class="portfolio__gallery gallery--cupboards">
+            <div class="portfolio__gallery">
 
               <div class="gallery__item">
                 <a class="gallery__card" href="#">
@@ -267,7 +266,7 @@
 
             </div>
 
-            <div class="portfolio__gallery gallery--living">
+            <div class="portfolio__gallery">
 
               <div class="gallery__item">
                 <a class="gallery__card" href="#">
@@ -315,7 +314,7 @@
 
             </div>
 
-            <div class="portfolio__gallery gallery--office">
+            <div class="portfolio__gallery">
 
               <div class="gallery__item">
                 <a class="gallery__card" href="#">
@@ -330,7 +329,7 @@
 
             </div>
 
-            <div class="portfolio__gallery gallery--wardrobe">
+            <div class="portfolio__gallery">
 
               <div class="gallery__item">
                 <a class="gallery__card" href="#">
@@ -345,7 +344,7 @@
 
             </div>
 
-            <div class="portfolio__gallery gallery--lobby">
+            <div class="portfolio__gallery">
 
               <div class="gallery__item">
                 <a class="gallery__card" href="#">
@@ -380,28 +379,53 @@
         </ul>
       </section> -->
 
+      <section class="technologies">
+
+        <div class="technologies__image">
+          <h2 class="technologies__title index-h2">Используем практичные технологии —</h2>
+          <span class="technologies__dot technologies__dot--1"></span>
+          <div class="technologies__text technologies__text--1">
+            Для максимального удобства и красоты устанавливаем подсветку рабочей зоны и подсветку стеклянных полок
+          </div>
+          <span class="technologies__dot technologies__dot--2"></span>
+          <div class="technologies__text technologies__text--2">
+            Подбираем столешницы под ваш бюджет (натуральный камень, искусственный камень, ДСП под пластиком)
+          </div>
+          <span class="technologies__dot technologies__dot--3"></span>
+          <div class="technologies__text technologies__text--3">
+            Фасады (ЛДСП, МДФ, пластик, классические под дерево, пленочные, натуральное дерево)
+          </div>
+          <span class="technologies__dot technologies__dot--4"></span>
+          <div class="technologies__text technologies__text--4">
+            Устанавливаем качественную фурнитуру с доводчиками и различными типами открывания
+          </div>
+        </div>
+
+
+      </section>
+
       <section class="process container">
-        <h2 class="process__title index-h2">Как мы работаем</h2>
+        <h2 class="process__title index-h2">Как мы создаём мебель —</h2>
         <ul class="process__list">
           <li class="process__item">
             <b class="process__item-number">01</b>
             <h3>Заявка 📝</h3>
-            <p>Оставьте заявку удобным для Вас способом.</p>
+            <p>Оставьте заявку удобным для вас способом.</p>
           </li>
           <li class="process__item">
             <b class="process__item-number">02</b>
             <h3>Бесплатный замер 📐</h3>
-            <p>Бесплатно сделаем замеры и обсудим c Вами дополнительные детали.</p>
+            <p>Бесплатно сделаем замеры и обсудим с вами дополнительные детали.</p>
           </li>
           <li class="process__item">
             <b class="process__item-number">03</b>
             <h3>Разработка проекта 🖥</h3>
-            <p>Бесплатно разработаем дизайн-проект и согласуем с Вами.</p>
+            <p>Бесплатно разработаем дизайн-проект и согласуем с вами.</p>
           </li>
           <li class="process__item">
             <b class="process__item-number">04</b>
             <h3>Производство 🛠️</h3>
-            <p>После согласования проекта мы отправляем мебель на производство.</p>
+            <p>После согласования мы запускаем наш производственный цех.</p>
           </li>
           <li class="process__item">
             <b class="process__item-number">05</b>
@@ -414,7 +438,7 @@
       <section class="request">
         <div class="container">
           <h2 class="request__title index-h2">Оставить заявку на бесплатный замер</h2>
-          <p class="request__text">Это ни к чему Вас не обязывает и помогает точно оценить стоимость будущего проекта</p>
+          <p class="request__text">Это ни к чему вас не обязывает и помогает точно оценить стоимость будущего проекта</p>
           <form class="request__form" action="https://echo.htmlacademy.ru" method="post">
             <p class="request__form-input">
               <label for="request__name" class="visually-hidden">Ваше имя</label>
@@ -455,12 +479,15 @@
               </ul>
             </div>
           </form>
-          <p class="request__note">Оставляя заявку, Вы принимаете условия <a href="#">Политики защиты персональной информации</a></p>
+          <p class="request__note">Оставляя заявку, вы принимаете условия <a href="#">Политики защиты персональной информации</a></p>
         </div>
       </section>
 
       <section class="contacts">
-        <h2 class="contacts__title index-h2">Контакты</h2>
+        <div class="container">
+          <h2 class="contacts__title index-h2">Заходите в наш офис —</h2>
+          <p class="contacts__appeal">Мы проконсультируем вас по всем вопросам и покажем образцы материалов</p>
+        </div>
         <div class="contacts__container">
           <div class="contacts__wrapper">
             <div class="contacts__office" style="width: 200px">
