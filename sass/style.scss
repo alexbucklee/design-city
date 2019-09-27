@@ -721,8 +721,13 @@ input[type="radio"].visually-hidden {
 // portfolio
 
 @keyframes line-grow {
-  0% {transform: scaleX(0);}
-  100% {transform: scaleX(1);}
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes line-grow-out {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
 }
 
 .tab-nav {
@@ -778,7 +783,7 @@ input[type="radio"].visually-hidden {
     height: 4px;
     background: #3EC640;
     border-radius: 4px 4px 0 0;
-    animation: line-grow 0.3s;
+    animation: line-grow 0.3s ease;
   }
 }
 
