@@ -22,6 +22,7 @@ document.querySelector(".tab-nav__list").addEventListener("click", function(evt)
     var tabBody = document.querySelectorAll(".portfolio__gallery");
     for (var i = 0; i < tabBody.length; i++) {
       if (dataTab == i) {
+        document.querySelector(".portfolio__gallery-wrapper").scrollTo(0, 0);
         tabBody[i].style.display = "flex";
         tabBody[i].classList.add("gallery");
         hideArrows();
@@ -83,11 +84,12 @@ document.querySelector(".modal__overlay").addEventListener("click", function (ev
 
 document.querySelector(".welcome__button--desktop").addEventListener("click", function (evt) {
   evt.preventDefault();
-  var portfolio = document.querySelector("#portfolio");
+  document.querySelector("#portfolio").scrollIntoView();
+})
 
-  getCoords(portfolio);
-
-  window.scrollTo(0, top);
+document.querySelector(".welcome__button--mobile").addEventListener("click", function (evt) {
+  evt.preventDefault();
+  document.querySelector("#portfolio").scrollIntoView();
 })
 
 function getCoords(portfolio) {
