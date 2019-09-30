@@ -895,14 +895,12 @@ input[type="radio"].visually-hidden {
 
 @media (max-width: $mobile-width-only) {
   .portfolio {
-    // временно
-    min-height: 448px;
     box-sizing: border-box;
+    margin-bottom: 48px;
   }
 
   .portfolio__title {
     padding-top: 16px;
-    margin-bottom: 16px;
   }
 
   .portfolio__text {
@@ -1185,7 +1183,7 @@ input[type="radio"].visually-hidden {
 // process
 
 .process {
-  padding-bottom: 52px;
+  padding-bottom: 36px;
 }
 
 .process__item-number {
@@ -1486,7 +1484,7 @@ input[type="radio"].visually-hidden {
 // contacts
 
 .contacts {
-  padding-top: 40px;
+  padding-top: 32px;
 
   & iframe {
     margin-top: 8px;
@@ -1495,7 +1493,7 @@ input[type="radio"].visually-hidden {
 
 .contacts__appeal {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   font-weight: 300;
 }
 
@@ -1719,8 +1717,7 @@ input[type="radio"].visually-hidden {
 
 .technologies {
   position: relative;
-  margin-top: -64px;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
   padding-top: 24px;
   padding-bottom: 32px;
   // height: 584px;
@@ -1744,8 +1741,7 @@ input[type="radio"].visually-hidden {
 
 .technologies__title {
   position: relative;
-  margin-left: 36px;
-  margin-right: 24px;
+  margin-left: 12px;
   margin-bottom: 32px;
   color: #ffffff;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
@@ -1803,6 +1799,7 @@ input[type="radio"].visually-hidden {
     position: relative;
     height: 100%;
     margin: 0 auto;
+    margin-top: -72px;
     width: 720px;
   }
 
@@ -1818,28 +1815,28 @@ input[type="radio"].visually-hidden {
     &--1 {
       width: 312px;
       height: 72px;
-      top: 21.7%;
+      top: 34.8%;
       left: 3.1%;
     }
 
     &--2 {
       width: 320px;
       height: 72px;
-      top: 21.7%;
+      top: 34.8%;
       right: 0;
     }
 
     &--3 {
       width: 256px;
       height: 72px;
-      top: 57.5%;
+      top: 69.6%;
       left: 10.4%;
     }
 
     &--4 {
       width: 272px;
       height: 72px;
-      top: 57.5%;
+      top: 69.6%;
       right: 0;
     }
   }
@@ -1891,8 +1888,27 @@ input[type="radio"].visually-hidden {
     }
   }
 
+  .technologies__image {
+    width: 1120px;
+  }
+
   .technologies__title {
     padding-left: 120px;
+  }
+
+  .technologies__text {
+
+    &--1 {
+      left: 17.9%;
+    }
+
+    &--2, &--4 {
+      right: 17.9%;
+    }
+
+    &--3 {
+      left: 21.4%;
+    }
   }
 }
 

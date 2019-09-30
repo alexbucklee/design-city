@@ -82,21 +82,22 @@ document.querySelector(".modal__overlay").addEventListener("click", function (ev
   document.querySelector(".modal").style.display = "none";
 })
 
-document.querySelector(".welcome__button--desktop").addEventListener("click", function (evt) {
-  evt.preventDefault();
-  document.querySelector("#portfolio").scrollIntoView();
-})
+// document.querySelector(".welcome__button--desktop").addEventListener("click", function (evt) {
+//   evt.preventDefault();
+//   document.querySelector("#portfolio").scrollIntoView();
+// })
+//
+// document.querySelector(".welcome__button--mobile").addEventListener("click", function (evt) {
+//   evt.preventDefault();
+//   document.querySelector("#portfolio").scrollIntoView();
+// })
 
-document.querySelector(".welcome__button--mobile").addEventListener("click", function (evt) {
-  evt.preventDefault();
-  document.querySelector("#portfolio").scrollIntoView();
-})
+const anchors = document.querySelectorAll('a[href*="#"]')
 
-function getCoords(portfolio) {
-  var box = portfolio.getBoundingClientRect();
-
-  return {
-    top: box.top + pageYOffset,
-    left: box.left + pageXOffset
-  };
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function(evt) {
+    event.preventDefault();
+    const blockID = anchor.getAttribute("href");
+    document.querySelector("" + blockID).scrollIntoView();
+  })
 }
