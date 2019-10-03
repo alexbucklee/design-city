@@ -64,9 +64,11 @@
         <div class="welcome__image">
         </div>
         <div class="welcome__col-1">
-          <b class="welcome__intro">Изготовим мебель<br>по индивидуальному<br>проекту</b>
-          <a class="button welcome__button welcome__button--mobile" href="#portfolio">Посмотреть работы</a>
-          <a class="button welcome__button welcome__button--desktop" href="#portfolio">Посмотреть примеры работ</a>
+          <div class="welcome__wrapper">
+            <b class="welcome__intro">Изготовим мебель<br>по индивидуальному<br>проекту</b>
+            <a class="button welcome__button welcome__button--mobile" href="#portfolio">Посмотреть работы</a>
+            <a class="button welcome__button welcome__button--desktop" href="#portfolio">Посмотреть примеры работ</a>
+          </div>
           <a class="welcome__arrow-button" href="#portfolio"></a>
         </div>
       </section>
@@ -96,11 +98,13 @@
         </nav>
 
         <div class="portfolio__scroll-hider">
-          <div class="arrows-wrapper arrows-wrapper--right">
-            <div class="arrow arrow--right"></div>
-          </div>
-          <div class="arrows-wrapper arrows-wrapper--left">
-            <div class="arrow arrow--left"></div>
+          <div class="arrows-container">
+            <div class="arrows-wrapper arrows-wrapper--right">
+              <div class="arrow arrow--right"></div>
+            </div>
+            <div class="arrows-wrapper arrows-wrapper--left">
+              <div class="arrow arrow--left"></div>
+            </div>
           </div>
           <div class="portfolio__gallery-wrapper container">
 
@@ -544,6 +548,14 @@
     <div class="modal">
       <div class="modal__overlay"></div>
       <div class="modal__catalog-item">
+        <div class="arrows-container">
+          <div class="arrows-wrapper arrows-wrapper--right arrows-wrapper--modal">
+            <div class="arrow arrow--right"></div>
+          </div>
+          <div class="arrows-wrapper arrows-wrapper--left arrows-wrapper--modal">
+            <div class="arrow arrow--left"></div>
+          </div>
+        </div>
         <div class="catalog-item__col-1">
           <img src="img/photos/kitchen-1.jpg" alt="">
         </div>
@@ -566,10 +578,6 @@
               <tr>
                 <th>Длина</th>
                 <td>3 м</td>
-              </tr>
-              <tr>
-                <th>Стоимость</th>
-                <td>60 000 руб.</td>
               </tr>
             </tbody>
           </table>

@@ -75,11 +75,13 @@ arrowLeft.addEventListener("click", function (evt) {
 document.querySelector(".portfolio__kitchen-1").addEventListener("click", function (evt) {
   evt.preventDefault();
   document.querySelector(".modal").style.display = "block";
+  document.querySelector("body").classList.add("scroll-hidden");
 })
 
 document.querySelector(".modal__overlay").addEventListener("click", function (evt) {
   evt.preventDefault();
   document.querySelector(".modal").style.display = "none";
+  document.querySelector("body").classList.remove("scroll-hidden");
 })
 
 // document.querySelector(".welcome__button--desktop").addEventListener("click", function (evt) {
