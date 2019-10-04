@@ -14,6 +14,8 @@ function hideArrows() {
   }
 }
 
+hideArrows();
+
 document.querySelector(".tab-nav__list").addEventListener("click", function(evt) {
   if (event.target.className == "tab-nav__tab") {
     var dataTab = event.target.getAttribute("data-tab");
@@ -72,26 +74,16 @@ arrowLeft.addEventListener("click", function (evt) {
   gallery.style.transform = "translateX(" +position+ "px)";
 });
 
-document.querySelector(".portfolio__kitchen-1").addEventListener("click", function (evt) {
-  evt.preventDefault();
-  document.querySelector(".modal").style.display = "block";
-  document.querySelector("body").classList.add("scroll-hidden");
-})
-
-document.querySelector(".modal__overlay").addEventListener("click", function (evt) {
-  evt.preventDefault();
-  document.querySelector(".modal").style.display = "none";
-  document.querySelector("body").classList.remove("scroll-hidden");
-})
-
-// document.querySelector(".welcome__button--desktop").addEventListener("click", function (evt) {
+// document.querySelector(".portfolio__kitchen-1").addEventListener("click", function (evt) {
 //   evt.preventDefault();
-//   document.querySelector("#portfolio").scrollIntoView();
+//   document.querySelector(".modal").style.display = "block";
+//   document.querySelector("body").classList.add("scroll-hidden");
 // })
-//
-// document.querySelector(".welcome__button--mobile").addEventListener("click", function (evt) {
+
+// document.querySelector(".modal__overlay").addEventListener("click", function (evt) {
 //   evt.preventDefault();
-//   document.querySelector("#portfolio").scrollIntoView();
+//   document.querySelector(".modal").style.display = "none";
+//   document.querySelector("body").classList.remove("scroll-hidden");
 // })
 
 const anchors = document.querySelectorAll('a[href*="#"]')
