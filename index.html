@@ -109,17 +109,39 @@
           </div>
           <div class="portfolio__gallery-wrapper container">
 
+            <!-- Кухни -->
             <div class="portfolio__gallery gallery" style="display: flex">
 
               <div class="gallery__item">
-                <a data-fancybox="gallery-1" class="gallery__card" href="img/photos/kitchen-1.jpg" style="background-image: url(img/photos/kitchen-1-small-1x.jpg)">
+                <a data-fancybox="gallery-1" class="gallery__card" href="img/photos/kitchen-1.jpg" style="background-image: url(img/photos/thumbnails/kitchen-1.jpg)">
                   <h3>Кухня в скандинавском стиле</h3>
                   <span class="gallery__card-about">Подробнее</span>
                 </a>
               </div>
 
               <div class="gallery__item">
-                <a data-fancybox="gallery-1" class="gallery__card" href="img/photos/kitchen-2.jpg" style="background-image: url(img/photos/kitchen-2-small-1x.jpg)">
+                <a data-fancybox="gallery-1" class="gallery__card" href="img/photos/kitchen-2.jpg" style="background-image: url(img/photos/thumbnails/kitchen-2.jpg)">
+                  <h3>Кухня в скандинавском стиле</h3>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a data-fancybox="gallery-1" class="gallery__card" href="img/photos/kitchen-3.jpg" style="background-image: url(img/photos/thumbnails/kitchen-3.jpg)">
+                  <h3>Кухня в скандинавском стиле</h3>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a data-fancybox="gallery-1" class="gallery__card" href="img/photos/kitchen-3.jpg" style="background-image: url(img/photos/thumbnails/kitchen-3.jpg)">
+                  <h3>Кухня в скандинавском стиле</h3>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a data-fancybox="gallery-1" class="gallery__card" href="img/photos/kitchen-3.jpg" style="background-image: url(img/photos/thumbnails/kitchen-3.jpg)">
                   <h3>Кухня в скандинавском стиле</h3>
                   <span class="gallery__card-about">Подробнее</span>
                 </a>
@@ -127,11 +149,33 @@
 
             </div>
 
+            <!-- Шкафы -->
             <div class="portfolio__gallery">
 
               <div class="gallery__item">
-                <a data-fancybox="gallery-2" class="gallery__card" href="img/photos/kitchen-1.jpg">
+                <a data-fancybox="cupboards" class="gallery__card" href="img/photos/cupboard-1.jpg" style="background-image: url(img/photos/thumbnails/cupboard-1.jpg)">
                   <h3>Шкаф-1</h3>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a data-fancybox="cupboards" class="gallery__card" href="img/photos/cupboard-2.jpg" style="background-image: url(img/photos/thumbnails/cupboard-2.jpg)">
+                  <h3>Шкаф-2</h3>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a data-fancybox="cupboards" class="gallery__card" href="img/photos/cupboard-3.jpg" style="background-image: url(img/photos/thumbnails/cupboard-3.jpg)">
+                  <h3>Шкаф-3</h3>
+                  <span class="gallery__card-about">Подробнее</span>
+                </a>
+              </div>
+
+              <div class="gallery__item">
+                <a data-fancybox="cupboards" class="gallery__card" href="img/photos/cupboard-4.jpg" style="background-image: url(img/photos/thumbnails/cupboard-4.jpg)">
+                  <h3>Шкаф-4</h3>
                   <span class="gallery__card-about">Подробнее</span>
                 </a>
               </div>
@@ -282,7 +326,7 @@
           <li class="process__item">
             <b class="process__item-number">01</b>
             <h3>Заявка 📝</h3>
-            <p>Оставьте заявку удобным для вас способом. <a href="#">Оставить заявку</a></p>
+            <p>Оставьте заявку удобным для вас способом. <a href="#request">Оставить заявку</a></p>
           </li>
           <li class="process__item">
             <b class="process__item-number">02</b>
@@ -307,11 +351,11 @@
         </ul>
       </section>
 
-      <section class="request">
+      <section id="request" class="request">
         <div class="container">
           <h2 class="request__title index-h2">Оставить заявку на бесплатный замер</h2>
           <p class="request__text">Это ни к чему вас не обязывает и помогает точно оценить стоимость будущего проекта</p>
-          <form class="request__form" action="php/telegram.php" method="post">
+          <form class="request__form" action="php/mail.php" method="POST">
             <p class="request__form-input">
               <label for="request__name" class="visually-hidden">Ваше имя</label>
               <input id="request__name" type="text" name="user_name" value="" placeholder="Ваше имя">
@@ -321,7 +365,7 @@
               <input id="requst__phone" type="tel" name="user_phone" value="" placeholder="Телефон">
             </p>
             <div class="request__wrapper">
-              <button class="request__button button" type="button" name="submit">Оставить заявку</button>
+              <button class="request__button button" type="submit">Оставить заявку</button>
               <p class="request__text-write">или напишите нам</p>
               <ul class="request__social-list">
                 <li class="social-list__item">
@@ -456,5 +500,21 @@
     <script type="text/javascript" src="libs/jquery/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="libs/fancybox/jquery.fancybox.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+
+    <script>
+      $('form').submit(function(event) {
+        event.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "php/mail.php",
+          data: $(this).serialize()
+        }).done(function() {
+          $(this).find("input").val("");
+          alert("Спасибо за заявку!");
+          $("form").trigger("reset");
+        });
+        return false;
+      });
+    </script>
   </body>
 </html>

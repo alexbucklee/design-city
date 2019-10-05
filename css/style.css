@@ -652,9 +652,9 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
   white-space: nowrap;
   border-radius: 4px;
-  background-image: url("../img/photos/kitchen-1-small-1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  filter: grayscale(0.6);
   white-space: normal;
   transition: all 0.3s;
 }
@@ -685,6 +685,7 @@ input[type="radio"].visually-hidden {
 .gallery__card:hover {
   transform: translateY(-6px);
   transition: transform 0.3s ease;
+  filter: grayscale(0);
 }
 .gallery__card:hover h3 {
   opacity: 0;

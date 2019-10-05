@@ -14,8 +14,6 @@ function hideArrows() {
   }
 }
 
-hideArrows();
-
 document.querySelector(".tab-nav__list").addEventListener("click", function(evt) {
   if (event.target.className == "tab-nav__tab") {
     var dataTab = event.target.getAttribute("data-tab");
@@ -27,12 +25,12 @@ document.querySelector(".tab-nav__list").addEventListener("click", function(evt)
         document.querySelector(".portfolio__gallery-wrapper").scrollTo(0, 0);
         tabBody[i].style.display = "flex";
         tabBody[i].classList.add("gallery");
-        hideArrows();
       } else {
         tabBody[i].style.display = "none";
         tabBody[i].classList.remove("gallery");
       }
     }
+    hideArrows();
   }
 })
 

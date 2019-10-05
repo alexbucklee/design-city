@@ -801,6 +801,7 @@ input[type="radio"].visually-hidden {
   border-radius: 4px;
   background-repeat: no-repeat;
   background-size: cover;
+  filter: grayscale(0.6);
   // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.06);
   white-space: normal;
   transition: all 0.3s;
@@ -836,6 +837,7 @@ input[type="radio"].visually-hidden {
   &:hover {
     transform: translateY(-6px);
     transition: transform 0.3s ease;
+    filter: grayscale(0);
   }
 
   &:hover h3 {
